@@ -1,32 +1,38 @@
 openapi: 3.0.4
 info:
   title: IP Blacklist Lookup
-  description: IP Blacklist Lookup is a simple tool for looking up if an IP address is in a blacklist. It returns if the IP is found in a blacklist.
+  description: >-
+    IP Blacklist Lookup checks whether a given IP address appears on known
+    malicious IP blocklists. Identifies both inbound threats (attackers,
+    spammers) and outbound threats (C2 servers, malware hosts).
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/ipblacklistlookup:
     get:
-      summary: Lookup IP in Blacklist
-      description: IP Blacklist Lookup is a simple tool for looking up if an IP address is in a blacklist. It returns if the IP is found in a blacklist.
+      summary: Check IP Against Blocklists
+      description: >-
+        Checks whether an IP address appears on inbound (attacker) or outbound
+        (malicious destination) blocklists and returns threat level assessment
+        with geolocation details.
       operationId: ipblacklistlookup
       parameters:
-      - name: ip
-        in: query
-        schema:
-          type: string
-        required: true
-        description: The IP address to lookup in the blacklist (e.g., 201.23.192.173)
-        example: 201.23.192.173
+        - name: ip
+          in: query
+          schema:
+            type: string
+          required: true
+          description: The IP address to check against blocklists
+          example: 185.220.101.1
       responses:
         '200':
           description: Successful Response
@@ -42,28 +48,42 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
-                  ipAddress: 201.23.192.173
+                  ipAddress: 185.220.101.1
                   isIPBlacklisted: true
+                  inbound:
+                    found: true
+                    description: >-
+                      IP is known for malicious inbound activity (spam,
+                      scanning, brute-force attacks)
+                  outbound: null
+                  threatLevel: high
                   ipDetails:
-                    range:
-                    - 3373776896
-                    - 3373785087
-                    country: BR
-                    region: ''
-                    timezone: America/Sao_Paulo
-                  parsed: true
+                    ip: 185.220.101.1
+                    country: DE
+                    region: BY
+                    timezone: Europe/Berlin
+                    city: Nuremberg
+                    coordinates:
+                      - 49.4478
+                      - 11.0683
+                    countryName: Germany
+                    regionName: Bavaria
+                    postalCode: '90403'
+                    continent: EU
+                    continentName: Europe
+                    accuracyRadius: 20
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -71,4 +91,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
