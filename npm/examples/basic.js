@@ -15,7 +15,7 @@ const api = new ipblacklistlookupAPI({
 
 // Example query
 var query = {
-  ip: "201.23.192.173"
+  ip: "185.220.101.1"
 };
 
 // Make the API request using callback
