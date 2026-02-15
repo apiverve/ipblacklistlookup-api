@@ -1,6 +1,6 @@
 # IP Blacklist Lookup Android SDK
 
-IP Blacklist Lookup is a simple tool for looking up if an IP address is in a blacklist. It returns if the IP is found in a blacklist.
+IP Blacklist Lookup checks whether a given IP address appears on known malicious IP blocklists. Identifies both inbound threats (attackers, spammers) and outbound threats (C2 servers, malware hosts).
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![Platform](https://img.shields.io/badge/Platform-Android-green.svg)
@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:ipblacklistlookup-api:1.1.12'
+    implementation 'com.github.apiverve:ipblacklistlookup-api:1.1.13'
 }
 ```
 
@@ -47,7 +47,7 @@ IPBlacklistLookupAPIClient client = new IPBlacklistLookupAPIClient("YOUR_API_KEY
 try {
     // Prepare query parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("key", "value");
+    parameters.put("ip", "185.220.101.1");
 
     // Execute the request
     APIResponse response = client.execute(parameters);
@@ -135,7 +135,7 @@ For detailed API documentation, visit: [https://docs.apiverve.com/ref/ipblacklis
 
 ## Get Your API Key
 
-Get your API key from [https://apiverve.com](https://apiverve.com)
+Get your API key from [https://apiverve.com](https://apiverve.com?utm_source=android&utm_medium=readme)
 
 ---
 
@@ -162,4 +162,4 @@ This SDK is released under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## About APIVerve
 
-[APIVerve](https://apiverve.com) provides production-ready REST APIs for developers. Fast, reliable, and easy to integrate.
+[APIVerve](https://apiverve.com?utm_source=android&utm_medium=readme) provides production-ready REST APIs for developers. Fast, reliable, and easy to integrate.
