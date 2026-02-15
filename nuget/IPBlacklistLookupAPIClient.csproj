@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFrameworks>net20;net35;net40;net45;netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>APIVerve.API.IPBlacklistLookup</Title>
-    <Version>1.1.12</Version>
+    <Title>IPBlacklistLookup</Title>
+    <Version>1.1.13</Version>
     <Authors>APIVerve</Authors>
     <Company>APIVerve</Company>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -12,13 +12,13 @@
 
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
-    <PackageProjectUrl>https://apiverve.com/marketplace/ipblacklistlookup</PackageProjectUrl>
+    <PackageProjectUrl>https://apiverve.com/marketplace/ipblacklistlookup?utm_source=nuget&amp;utm_medium=homepage</PackageProjectUrl>
     <SignAssembly>False</SignAssembly>
-    <Description>IP Blacklist Lookup is a simple tool for looking up if an IP address is in a blacklist. It returns if the IP is found in a blacklist.</Description>
+    <Description>IP Blacklist Lookup checks whether a given IP address appears on known malicious IP blocklists. Identifies both inbound threats (attackers, spammers) and outbound threats (C2 servers, malware hosts).</Description>
     <RepositoryUrl>https://github.com/apiverve/ipblacklistlookup-api</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>ip blacklist lookup;ip blacklist lookup api;ip blacklist lookup tool;ip blacklist lookup software;ip blacklist lookup service;api;rest;http;client;apiverve;wrapper;sdk;api;rest;http;client;apiverve;wrapper;sdk</PackageTags>
-    <Copyright>©2025 APIVerve. All Rights Reserved</Copyright>
+    <PackageTags>api;rest;http;client;apiverve;wrapper;sdk;api;rest;http;client;apiverve;wrapper;sdk</PackageTags>
+    <Copyright>©2026 APIVerve. All Rights Reserved</Copyright>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
     <PackageIcon>favicon@128.png</PackageIcon>
     <BaseOutputPath>.\bin</BaseOutputPath>
