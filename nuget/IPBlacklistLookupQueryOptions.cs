@@ -11,8 +11,7 @@ namespace APIVerve.API.IPBlacklistLookup
     public class IPBlacklistLookupQueryOptions
     {
         /// <summary>
-        /// The IP address to lookup in the blacklist (e.g., 201.23.192.173)
-        /// Example: 201.23.192.173
+        /// The IP address to check against blocklists
         /// </summary>
         [JsonProperty("ip")]
         public string Ip { get; set; }
