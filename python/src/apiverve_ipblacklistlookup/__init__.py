@@ -1,1 +1,3 @@
-from .apiClient import IpblacklistlookupAPIClient
+from .apiClient import IpblacklistlookupAPIClient, IpblacklistlookupAPIClientError
+
+__all__ = ['IpblacklistlookupAPIClient', 'IpblacklistlookupAPIClientError']
