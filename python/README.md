@@ -227,8 +227,9 @@ from apiverve_ipblacklistlookup.apiClient import IpblacklistlookupAPIClient
 
 api = IpblacklistlookupAPIClient("[YOUR_API_KEY]")
 
+query = { "ip": "185.220.101.1" }
+
 try:
-    query = { "ip": "185.220.101.1" }
     result = api.execute(query)
     print(result)
 finally:
