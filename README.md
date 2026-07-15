@@ -1,13 +1,13 @@
-# [IP Blacklist Lookup API](https://apiverve.com/marketplace/ipblacklistlookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [IP Blacklist Lookup API](https://ipblacklistlookup.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
 
 IP Blacklist Lookup checks whether a given IP address appears on known malicious IP blocklists. Identifies both inbound threats (attackers, spammers) and outbound threats (C2 servers, malware hosts).
 
 The IP Blacklist Lookup API provides a simple, reliable way to integrate ip blacklist lookup functionality into your applications. Built for developers who need production-ready ip blacklist lookup capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/ipblacklistlookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://ipblacklistlookup.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/ipblacklistlookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://ipblacklistlookup.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -30,7 +30,11 @@ The IP Blacklist Lookup API provides a simple, reliable way to integrate ip blac
 ```javascript
 async function callIPBlacklistLookupAPI() {
     try {
-        const response = await fetch('https://api.apiverve.com/v1/ipblacklistlookup', {
+        const params = new URLSearchParams({
+            ip: '185.220.101.1'
+        });
+
+        const response = await fetch(`https://api.apiverve.com/v1/ipblacklistlookup?${params}`, {
             method: 'GET',
             headers: {
                 'x-api-key': 'YOUR_API_KEY_HERE'
@@ -50,7 +54,7 @@ callIPBlacklistLookupAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/ipblacklistlookup?param=value" \
+curl -X GET "https://api.apiverve.com/v1/ipblacklistlookup?ip=185.220.101.1" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -150,14 +154,14 @@ go get github.com/apiverve/ipblacklistlookup-api/go
 |---------|---------|
 | **Multi-language SDKs** | Native packages for JavaScript, Python, C#, Go, and Android |
 | **Simple Integration** | Single API key authentication, consistent response format |
-| **Production Ready** | 99.9% uptime, fast response times, used by thousands of developers |
+| **Production Ready** | 99.9% uptime SLA, served from 24 global regions |
 | **Comprehensive Docs** | Full examples, OpenAPI spec, and dedicated support |
 
 ---
 
 ## Documentation
 
-- 🏠 **API Home:** [IP Blacklist Lookup API](https://apiverve.com/marketplace/ipblacklistlookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [IP Blacklist Lookup API](https://ipblacklistlookup.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/ipblacklistlookup](https://docs.apiverve.com/ref/ipblacklistlookup)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -169,7 +173,7 @@ go get github.com/apiverve/ipblacklistlookup-api/go
 The IP Blacklist Lookup API is commonly used for:
 
 - **Web Applications** - Add ip blacklist lookup features to your frontend or backend
-- **Mobile Apps** - Native SDKs for iOS and Android development
+- **Mobile Apps** - Native SDKs for Android development
 - **Automation** - Integrate with n8n, Zapier, or custom workflows
 - **SaaS Products** - Enhance your product with ip blacklist lookup capabilities
 - **Data Pipelines** - Process and analyze data at scale
@@ -199,7 +203,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [IP Blacklist Lookup API](https://apiverve.com/marketplace/ipblacklistlookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [IP Blacklist Lookup API](https://ipblacklistlookup.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
