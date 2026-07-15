@@ -7,7 +7,7 @@ IP Blacklist Lookup checks whether a given IP address appears on known malicious
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 [![npm version](https://img.shields.io/npm/v/@apiverve/ipblacklistlookup.svg)](https://www.npmjs.com/package/@apiverve/ipblacklistlookup)
 
-This is a Javascript Wrapper for the [IP Blacklist Lookup API](https://apiverve.com/marketplace/ipblacklistlookup?utm_source=npm&utm_medium=readme)
+This is a Javascript Wrapper for the [IP Blacklist Lookup API](https://ipblacklistlookup.apiverve.com?utm_source=npm&utm_medium=readme)
 
 ---
 
@@ -122,18 +122,31 @@ async function makeRequest() {
   "status": "ok",
   "error": null,
   "data": {
-    "ipAddress": "201.23.192.173",
+    "ipAddress": "185.220.101.1",
     "isIPBlacklisted": true,
-    "ipDetails": {
-      "range": [
-        3373776896,
-        3373785087
-      ],
-      "country": "BR",
-      "region": "",
-      "timezone": "America/Sao_Paulo"
+    "inbound": {
+      "found": true,
+      "description": "IP is known for malicious inbound activity (spam, scanning, brute-force attacks)"
     },
-    "parsed": true
+    "outbound": null,
+    "threatLevel": "high",
+    "ipDetails": {
+      "ip": "185.220.101.1",
+      "country": "DE",
+      "region": "BY",
+      "timezone": "Europe/Berlin",
+      "city": "Nuremberg",
+      "coordinates": [
+        49.4478,
+        11.0683
+      ],
+      "countryName": "Germany",
+      "regionName": "Bavaria",
+      "postalCode": "90403",
+      "continent": "EU",
+      "continentName": "Europe",
+      "accuracyRadius": 20
+    }
   }
 }
 ```
