@@ -191,11 +191,52 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the IP Blacklist Lookup API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "ipAddress": "185.220.101.1",
+    "isIPBlacklisted": true,
+    "inbound": {
+      "found": true,
+      "description": "IP is known for malicious inbound activity (spam, scanning, brute-force attacks)"
+    },
+    "outbound": null,
+    "threatLevel": "high",
+    "ipDetails": {
+      "ip": "185.220.101.1",
+      "country": "DE",
+      "region": "BY",
+      "timezone": "Europe/Berlin",
+      "city": "Nuremberg",
+      "coordinates": [
+        49.4478,
+        11.0683
+      ],
+      "countryName": "Germany",
+      "regionName": "Bavaria",
+      "postalCode": "90403",
+      "continent": "EU",
+      "continentName": "Europe",
+      "accuracyRadius": 20
+    }
+  }
 }
 ```
 
