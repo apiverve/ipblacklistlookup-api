@@ -25,6 +25,9 @@ namespace APIVerve.API.IPBlacklistLookup
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,19 +36,34 @@ namespace APIVerve.API.IPBlacklistLookup
         public string IpAddress { get; set; }
 
         [JsonProperty("isIPBlacklisted")]
-        public bool IsIpBlacklisted { get; set; }
+        public bool? IsIpBlacklisted { get; set; }
+
+        [JsonProperty("inbound")]
+        public Inbound Inbound { get; set; }
+
+        [JsonProperty("outbound")]
+        public object Outbound { get; set; }
+
+        [JsonProperty("threatLevel")]
+        public string ThreatLevel { get; set; }
 
         [JsonProperty("ipDetails")]
         public IpDetails IpDetails { get; set; }
+    }
 
-        [JsonProperty("parsed")]
-        public bool Parsed { get; set; }
+    public partial class Inbound
+    {
+        [JsonProperty("found")]
+        public bool? Found { get; set; }
+
+        [JsonProperty("description")]
+        public string Description { get; set; }
     }
 
     public partial class IpDetails
     {
-        [JsonProperty("range")]
-        public long[] Range { get; set; }
+        [JsonProperty("ip")]
+        public string Ip { get; set; }
 
         [JsonProperty("country")]
         public string Country { get; set; }
@@ -55,5 +73,41 @@ namespace APIVerve.API.IPBlacklistLookup
 
         [JsonProperty("timezone")]
         public string Timezone { get; set; }
+
+        [JsonProperty("city")]
+        public string City { get; set; }
+
+        [JsonProperty("coordinates")]
+        public double?[] Coordinates { get; set; }
+
+        [JsonProperty("countryName")]
+        public string CountryName { get; set; }
+
+        [JsonProperty("regionName")]
+        public string RegionName { get; set; }
+
+        [JsonProperty("postalCode")]
+        public long? PostalCode { get; set; }
+
+        [JsonProperty("continent")]
+        public string Continent { get; set; }
+
+        [JsonProperty("continentName")]
+        public string ContinentName { get; set; }
+
+        [JsonProperty("accuracyRadius")]
+        public long? AccuracyRadius { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
