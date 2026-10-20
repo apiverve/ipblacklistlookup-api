@@ -1,13 +1,12 @@
 IP Blacklist Lookup API
 ============
 
-IP Blacklist Lookup checks whether a given IP address appears on known malicious IP blocklists. Identifies both inbound threats (attackers, spammers) and outbound threats (C2 servers, malware hosts).
+IP Blacklist Lookup is an IP blacklist check API that tells you whether a given IP address appears on known malicious IP blocklists. Identifies both inbound threats (attackers, spammers) and outbound threats (C2 servers, malware hosts).
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [IP Blacklist Lookup API](https://apiverve.com/marketplace/ipblacklistlookup?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-ipblacklistlookup.svg)](https://pypi.org/project/apiverve-ipblacklistlookup/)
+
+This is a Python wrapper for the [IP Blacklist Lookup API](https://apiverve.com/marketplace/ipblacklistlookup?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-ipblacklistlookup
 
 ## Configuration
 
-Before using the ipblacklistlookup API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the IP Blacklist Lookup API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -60,7 +59,7 @@ except Exception as e:
 
 ## Usage
 
-The IP Blacklist Lookup API documentation is found here: [https://docs.apiverve.com/ref/ipblacklistlookup](https://docs.apiverve.com/ref/ipblacklistlookup?utm_source=pypi&utm_medium=readme).
+The IP Blacklist Lookup API documentation is found here: [https://docs.apiverve.com/ref/ipblacklistlookup](https://docs.apiverve.com/ref/ipblacklistlookup?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -102,18 +101,35 @@ print(result)
   "status": "ok",
   "error": null,
   "data": {
-    "ipAddress": "201.23.192.173",
+    "ipAddress": "185.220.101.1",
     "isIPBlacklisted": true,
-    "ipDetails": {
-      "range": [
-        3373776896,
-        3373785087
-      ],
-      "country": "BR",
-      "region": "",
-      "timezone": "America/Sao_Paulo"
+    "inbound": {
+      "found": true,
+      "description": "IP is known for malicious inbound activity (spam, scanning, brute-force attacks)"
     },
-    "parsed": true
+    "outbound": null,
+    "threatLevel": "high",
+    "isTor": true,
+    "ipDetails": {
+      "ip": "185.220.101.1",
+      "country": "DE",
+      "region": "BY",
+      "timezone": "Europe/Berlin",
+      "city": "Nuremberg",
+      "coordinates": [
+        49.4478,
+        11.0683
+      ],
+      "countryName": "Germany",
+      "regionName": "Bavaria",
+      "postalCode": "90403",
+      "continent": "EU",
+      "continentName": "Europe",
+      "accuracyRadius": 20,
+      "isEU": true
+    },
+    "asn": "AS60729",
+    "asnName": "TORSERVERS-NET"
   }
 }
 ```
@@ -241,7 +257,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -252,12 +268,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
