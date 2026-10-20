@@ -2,9 +2,10 @@ openapi: 3.0.4
 info:
   title: IP Blacklist Lookup
   description: >-
-    IP Blacklist Lookup checks whether a given IP address appears on known
-    malicious IP blocklists. Identifies both inbound threats (attackers,
-    spammers) and outbound threats (C2 servers, malware hosts).
+    IP Blacklist Lookup is an IP blacklist check API that tells you whether a
+    given IP address appears on known malicious IP blocklists. Identifies both
+    inbound threats (attackers, spammers) and outbound threats (C2 servers,
+    malware hosts).
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +20,7 @@ servers:
 paths:
   /v1/ipblacklistlookup:
     get:
-      summary: Check IP Against Blocklists
+      summary: IP Blacklist Lookup
       description: >-
         Checks whether an IP address appears on inbound (attacker) or outbound
         (malicious destination) blocklists and returns threat level assessment
@@ -63,6 +64,7 @@ paths:
                       scanning, brute-force attacks)
                   outbound: null
                   threatLevel: high
+                  isTor: true
                   ipDetails:
                     ip: 185.220.101.1
                     country: DE
@@ -78,6 +80,9 @@ paths:
                     continent: EU
                     continentName: Europe
                     accuracyRadius: 20
+                    isEU: true
+                  asn: AS60729
+                  asnName: TORSERVERS-NET
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':

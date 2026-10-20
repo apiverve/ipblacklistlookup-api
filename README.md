@@ -1,13 +1,13 @@
-# [IP Blacklist Lookup API](https://ipblacklistlookup.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [IP Blacklist Lookup API](https://apiverve.com/marketplace/ipblacklistlookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-IP Blacklist Lookup checks whether a given IP address appears on known malicious IP blocklists. Identifies both inbound threats (attackers, spammers) and outbound threats (C2 servers, malware hosts).
+IP Blacklist Lookup is an IP blacklist check API that tells you whether a given IP address appears on known malicious IP blocklists. Identifies both inbound threats (attackers, spammers) and outbound threats (C2 servers, malware hosts).
 
 The IP Blacklist Lookup API provides a simple, reliable way to integrate ip blacklist lookup functionality into your applications. Built for developers who need production-ready ip blacklist lookup capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://ipblacklistlookup.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/ipblacklistlookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://ipblacklistlookup.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/ipblacklistlookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/ipblacklistlookup-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [IP Blacklist Lookup API](https://ipblacklistlookup.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [IP Blacklist Lookup API](https://apiverve.com/marketplace/ipblacklistlookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/ipblacklistlookup](https://docs.apiverve.com/ref/ipblacklistlookup)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -219,6 +219,7 @@ A real response from the IP Blacklist Lookup API:
     },
     "outbound": null,
     "threatLevel": "high",
+    "isTor": true,
     "ipDetails": {
       "ip": "185.220.101.1",
       "country": "DE",
@@ -234,8 +235,11 @@ A real response from the IP Blacklist Lookup API:
       "postalCode": "90403",
       "continent": "EU",
       "continentName": "Europe",
-      "accuracyRadius": 20
-    }
+      "accuracyRadius": 20,
+      "isEU": true
+    },
+    "asn": "AS60729",
+    "asnName": "TORSERVERS-NET"
   }
 }
 ```
@@ -244,7 +248,7 @@ A real response from the IP Blacklist Lookup API:
 
 ## Support & Community
 
-- 🏠 **API Home**: [IP Blacklist Lookup API](https://ipblacklistlookup.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [IP Blacklist Lookup API](https://apiverve.com/marketplace/ipblacklistlookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
