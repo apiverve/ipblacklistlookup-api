@@ -1,13 +1,12 @@
-IPBlacklistLookup API
+IP Blacklist Lookup API
 ============
 
-IP Blacklist Lookup checks whether a given IP address appears on known malicious IP blocklists. Identifies both inbound threats (attackers, spammers) and outbound threats (C2 servers, malware hosts).
+IP Blacklist Lookup is an IP blacklist check API that tells you whether a given IP address appears on known malicious IP blocklists. Identifies both inbound threats (attackers, spammers) and outbound threats (C2 servers, malware hosts).
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [IPBlacklistLookup API](https://ipblacklistlookup.apiverve.com?utm_source=nuget&utm_medium=readme)
+[![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.IPBlacklistLookup.svg)](https://www.nuget.org/packages/APIVerve.API.IPBlacklistLookup)
+
+This is a .NET wrapper for the [IP Blacklist Lookup API](https://apiverve.com/marketplace/ipblacklistlookup?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -40,8 +39,8 @@ From within Visual Studio:
 
 ## Configuration
 
-Before using the ipblacklistlookup API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=readme)
+Before using the IP Blacklist Lookup API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -61,8 +60,8 @@ class Program
         var apiClient = new IPBlacklistLookupAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new IPBlacklistLookupQueryOptions {
-    Ip = "185.220.101.1"
-};
+            Ip = "185.220.101.1"
+        };
 
         // Make the API call
         try
@@ -92,13 +91,13 @@ class Program
 
 ## Usage
 
-The IPBlacklistLookup API documentation is found here: [https://docs.apiverve.com/ref/ipblacklistlookup](https://docs.apiverve.com/ref/ipblacklistlookup?utm_source=nuget&utm_medium=readme).
+The IP Blacklist Lookup API documentation is found here: [https://docs.apiverve.com/ref/ipblacklistlookup](https://docs.apiverve.com/ref/ipblacklistlookup?utm_source=nuget&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-IPBlacklistLookup API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+IP Blacklist Lookup API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```csharp
 // Create an instance of the API client
@@ -125,8 +124,8 @@ public class Example
         var apiClient = new IPBlacklistLookupAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new IPBlacklistLookupQueryOptions {
-    Ip = "185.220.101.1"
-};
+            Ip = "185.220.101.1"
+        };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
 
@@ -157,8 +156,8 @@ public class Example
         var apiClient = new IPBlacklistLookupAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new IPBlacklistLookupQueryOptions {
-    Ip = "185.220.101.1"
-};
+            Ip = "185.220.101.1"
+        };
 
         var response = apiClient.Execute(queryOptions);
 
@@ -194,8 +193,8 @@ public class Example
         var apiClient = new IPBlacklistLookupAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new IPBlacklistLookupQueryOptions {
-    Ip = "185.220.101.1"
-};
+            Ip = "185.220.101.1"
+        };
 
         try
         {
@@ -250,8 +249,8 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new IPBlacklistLookupQueryOptions {
-    Ip = "185.220.101.1"
-};
+            Ip = "185.220.101.1"
+        };
 
         try
         {
@@ -375,6 +374,7 @@ using (var apiClient = new IPBlacklistLookupAPIClient("[YOUR_API_KEY]"))
     },
     "outbound": null,
     "threatLevel": "high",
+    "isTor": true,
     "ipDetails": {
       "ip": "185.220.101.1",
       "country": "DE",
@@ -390,8 +390,11 @@ using (var apiClient = new IPBlacklistLookupAPIClient("[YOUR_API_KEY]"))
       "postalCode": "90403",
       "continent": "EU",
       "continentName": "Europe",
-      "accuracyRadius": 20
-    }
+      "accuracyRadius": 20,
+      "isEU": true
+    },
+    "asn": "AS60729",
+    "asnName": "TORSERVERS-NET"
   }
 }
 ```
@@ -400,7 +403,7 @@ using (var apiClient = new IPBlacklistLookupAPIClient("[YOUR_API_KEY]"))
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -411,12 +414,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 

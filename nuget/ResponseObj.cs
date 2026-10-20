@@ -47,8 +47,17 @@ namespace APIVerve.API.IPBlacklistLookup
         [JsonProperty("threatLevel")]
         public string ThreatLevel { get; set; }
 
+        [JsonProperty("isTor")]
+        public bool? IsTor { get; set; }
+
         [JsonProperty("ipDetails")]
         public IpDetails IpDetails { get; set; }
+
+        [JsonProperty("asn")]
+        public string Asn { get; set; }
+
+        [JsonProperty("asnName")]
+        public string AsnName { get; set; }
     }
 
     public partial class Inbound
@@ -97,6 +106,9 @@ namespace APIVerve.API.IPBlacklistLookup
 
         [JsonProperty("accuracyRadius")]
         public long? AccuracyRadius { get; set; }
+
+        [JsonProperty("isEU")]
+        public bool? IsEu { get; set; }
     }
 
     public partial class Premium
