@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/ipblacklistlookup",
-  "version": "1.2.0",
-  "description": "IP Blacklist Lookup checks whether a given IP address appears on known malicious IP blocklists. Identifies both inbound threats (attackers, spammers) and outbound threats (C2 servers, malware hosts).",
+  "version": "1.2.2",
+  "description": "IP Blacklist Lookup is an IP blacklist check API that tells you whether a given IP address appears on known malicious IP blocklists. Identifies both inbound threats (attackers, spammers) and outbound threats (C2 servers, malware hosts).",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "ip blacklist lookup", "ip blocklist", "malicious ip", "threat intelligence", "ip reputation"
+    "ip blacklist check api", "blacklist check api", "ip reputation check api", "ip reputation api", "ip blacklist api"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/ipblacklistlookup-api/issues"
   },
-  "homepage": "https://ipblacklistlookup.apiverve.com?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/ipblacklistlookup?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",

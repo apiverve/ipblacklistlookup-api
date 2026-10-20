@@ -30,7 +30,10 @@ declare module '@apiverve/ipblacklistlookup' {
       inbound:         Inbound;
       outbound:        null;
       threatLevel:     null | string;
+      isTor:           boolean | null;
       ipDetails:       IPDetails;
+      asn:             null | string;
+      asnName:         null | string;
   }
   
   interface Inbound {
@@ -51,6 +54,7 @@ declare module '@apiverve/ipblacklistlookup' {
       continent:      null | string;
       continentName:  null | string;
       accuracyRadius: number | null;
+      isEU:           boolean | null;
   }
 
   export default class ipblacklistlookupWrapper {
