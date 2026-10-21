@@ -1,6 +1,6 @@
 # IP Blacklist Lookup API - PHP Package
 
-IP Blacklist Lookup checks whether a given IP address appears on known malicious IP blocklists. Identifies both inbound threats (attackers, spammers) and outbound threats (C2 servers, malware hosts).
+IP Blacklist Lookup is an IP blacklist check API that tells you whether a given IP address appears on known malicious IP blocklists. Identifies both inbound threats (attackers, spammers) and outbound threats (C2 servers, malware hosts).
 
 ## Installation
 
@@ -77,6 +77,7 @@ $client = new Client(
     },
     "outbound": null,
     "threatLevel": "high",
+    "isTor": true,
     "ipDetails": {
       "ip": "185.220.101.1",
       "country": "DE",
@@ -92,8 +93,11 @@ $client = new Client(
       "postalCode": "90403",
       "continent": "EU",
       "continentName": "Europe",
-      "accuracyRadius": 20
-    }
+      "accuracyRadius": 20,
+      "isEU": true
+    },
+    "asn": "AS60729",
+    "asnName": "TORSERVERS-NET"
   }
 }
 ```
@@ -105,11 +109,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/ipblacklistlookup?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/ipblacklistlookup?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://ipblacklistlookup.apiverve.com?utm_source=php&utm_medium=readme](https://ipblacklistlookup.apiverve.com?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/ipblacklistlookup?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/ipblacklistlookup?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
