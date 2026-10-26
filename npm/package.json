@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/ipblacklistlookup",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "IP Blacklist Lookup is an IP blacklist check API that tells you whether a given IP address appears on known malicious IP blocklists. Identifies both inbound threats (attackers, spammers) and outbound threats (C2 servers, malware hosts).",
   "main": "index.js",
   "types": "index.d.ts",
