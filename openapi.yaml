@@ -57,32 +57,57 @@ paths:
                 data:
                   ipAddress: 185.220.101.1
                   isIPBlacklisted: true
+                  isPublic: true
                   inbound:
                     found: true
                     description: >-
                       IP is known for malicious inbound activity (spam,
                       scanning, brute-force attacks)
-                  outbound: null
-                  threatLevel: high
+                  outbound:
+                    found: true
+                    description: >-
+                      IP is a known malicious destination (C2 server, malware
+                      host, phishing)
+                  threatLevel: critical
                   isTor: true
                   ipDetails:
                     ip: 185.220.101.1
                     country: DE
-                    region: BY
+                    region: BB
                     timezone: Europe/Berlin
-                    city: Nuremberg
+                    city: Brandenburg an der Havel
                     coordinates:
-                      - 49.4478
-                      - 11.0683
+                      - 52.6171
+                      - 13.1207
                     countryName: Germany
-                    regionName: Bavaria
-                    postalCode: '90403'
+                    regionName: Brandenburg
+                    postalCode: '14621'
                     continent: EU
                     continentName: Europe
                     accuracyRadius: 20
                     isEU: true
                   asn: AS60729
                   asnName: TORSERVERS-NET
+                  hostingProvider: null
+                  listedInSubnet: 255
+                  isRiskySubnet: true
+                  isVpn: true
+                  isDatacenter: true
+                  isRelay: false
+                  blocklists:
+                    - name: DroneBL
+                      zone: dnsbl.dronebl.org
+                      listed: false
+                    - name: UCEPROTECT Level 1
+                      zone: dnsbl-1.uceprotect.net
+                      listed: false
+                    - name: 0spam
+                      zone: bl.0spam.org
+                      listed: false
+                    - name: PSBL
+                      zone: psbl.surriel.com
+                      listed: false
+                  blocklistsListed: 0
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
