@@ -38,11 +38,14 @@ namespace APIVerve.API.IPBlacklistLookup
         [JsonProperty("isIPBlacklisted")]
         public bool? IsIpBlacklisted { get; set; }
 
+        [JsonProperty("isPublic")]
+        public bool? IsPublic { get; set; }
+
         [JsonProperty("inbound")]
-        public Inbound Inbound { get; set; }
+        public Bound Inbound { get; set; }
 
         [JsonProperty("outbound")]
-        public object Outbound { get; set; }
+        public Bound Outbound { get; set; }
 
         [JsonProperty("threatLevel")]
         public string ThreatLevel { get; set; }
@@ -58,9 +61,45 @@ namespace APIVerve.API.IPBlacklistLookup
 
         [JsonProperty("asnName")]
         public string AsnName { get; set; }
+
+        [JsonProperty("hostingProvider")]
+        public object HostingProvider { get; set; }
+
+        [JsonProperty("listedInSubnet")]
+        public long? ListedInSubnet { get; set; }
+
+        [JsonProperty("isRiskySubnet")]
+        public bool? IsRiskySubnet { get; set; }
+
+        [JsonProperty("isVpn")]
+        public bool? IsVpn { get; set; }
+
+        [JsonProperty("isDatacenter")]
+        public bool? IsDatacenter { get; set; }
+
+        [JsonProperty("isRelay")]
+        public bool? IsRelay { get; set; }
+
+        [JsonProperty("blocklists")]
+        public Blocklist[] Blocklists { get; set; }
+
+        [JsonProperty("blocklistsListed")]
+        public long? BlocklistsListed { get; set; }
     }
 
-    public partial class Inbound
+    public partial class Blocklist
+    {
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("zone")]
+        public string Zone { get; set; }
+
+        [JsonProperty("listed")]
+        public bool? Listed { get; set; }
+    }
+
+    public partial class Bound
     {
         [JsonProperty("found")]
         public bool? Found { get; set; }
