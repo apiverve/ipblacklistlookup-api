@@ -25,18 +25,33 @@ declare module '@apiverve/ipblacklistlookup' {
 
 
   interface IPBlacklistLookupData {
-      ipAddress:       null | string;
-      isIPBlacklisted: boolean | null;
-      inbound:         Inbound;
-      outbound:        null;
-      threatLevel:     null | string;
-      isTor:           boolean | null;
-      ipDetails:       IPDetails;
-      asn:             null | string;
-      asnName:         null | string;
+      ipAddress:        null | string;
+      isIPBlacklisted:  boolean | null;
+      isPublic:         boolean | null;
+      inbound:          Bound;
+      outbound:         Bound;
+      threatLevel:      null | string;
+      isTor:            boolean | null;
+      ipDetails:        IPDetails;
+      asn:              null | string;
+      asnName:          null | string;
+      hostingProvider:  null;
+      listedInSubnet:   number | null;
+      isRiskySubnet:    boolean | null;
+      isVPN:            boolean | null;
+      isDatacenter:     boolean | null;
+      isRelay:          boolean | null;
+      blocklists:       Blocklist[];
+      blocklistsListed: number | null;
   }
   
-  interface Inbound {
+  interface Blocklist {
+      name:   null | string;
+      zone:   null | string;
+      listed: boolean | null;
+  }
+  
+  interface Bound {
       found:       boolean | null;
       description: null | string;
   }
