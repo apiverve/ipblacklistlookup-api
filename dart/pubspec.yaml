@@ -1,6 +1,6 @@
 name: apiverve_ipblacklistlookup
 description: "IP Blacklist Lookup is an IP blacklist check API that tells you whether a given IP address appears on known malicious IP blocklists. Identifies both inbound threats (attackers, spammers) and outbound threats (C2 servers, malware hosts)."
-version: 1.2.4
+version: 1.2.5
 homepage: https://apiverve.com/marketplace/ipblacklistlookup?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/ipblacklistlookup-api/tree/main/dart
 
